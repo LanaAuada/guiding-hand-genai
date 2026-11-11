@@ -1,13 +1,13 @@
-# Guiding Hand · assistente de direitos e mobilidade (RAG + LoRA local)
+# Guiding Hand: assistente de direitos e mobilidade (RAG + LoRA local)
 
 Trabalho de Generative AI for Engineering (FIAP), tema **Mobilidade**. Um assistente local que responde dúvidas de pessoas com deficiência visual sobre direitos, acessibilidade e transporte, **só com base em trechos de lei**: devolve JSON, cita a fonte e recusa ("não consta") quando a base não responde. Detalhes, diagrama, placar e os 5 erros estão em **[RELATORIO.md](RELATORIO.md)**.
 
 **Grupo**
 
-- João Rodrigo Solano Nogueira · RM 551319
-- Julia Amorim Bezerra · RM 99609
-- Lana Giulia Auada Leite · RM 551143
-- Tony Willian da Silva Segalin · RM 550667
+- João Rodrigo Solano Nogueira, RM 551319
+- Julia Amorim Bezerra, RM 99609
+- Lana Giulia Auada Leite, RM 551143
+- Tony Willian da Silva Segalin, RM 550667
 
 ## Resultado em uma tabela (35 casos de teste: 27 com resposta, 8 "não consta")
 
@@ -26,26 +26,28 @@ Busca: recall@1 = 81,5% e recall@3 = 96,3%, com limiar de similaridade 0,8754. A
 ```
 base/        trechos.jsonl (32 trechos com fonte), FONTES.md (fonte, formato, licença, nº de trechos)
 avaliacao/   casos_teste.jsonl (gabarito), limiar.json, resultados/*.json (saídas de cada config), placares .csv
-notebooks/   01 base · 02 busca (recall, limiar) · 03 A × B · 04 LoRA v1 · 05 LoRA v2 e placar final (com saídas salvas)
-src/         código (busca, geração, métricas, treino)
+notebooks/   01 base, 02 busca (recall, limiar), 03 A × B, 04 LoRA v1, 05 LoRA v2 e placar final (com saídas salvas)
+src/         código (busca, geração, métricas, treino, recálculo do placar)
 api/         main.py (API FastAPI) e testar_api.py (demonstração)
-modelo-lora_v2/   adaptador LoRA treinado
+modelo-lora_v2/   adaptador LoRA usado na config C e na API (modelo-lora/ é o v1)
 ```
+
+Nos notebooks e nos arquivos de resultado a configuração final aparece como **C2** (LoRA v2); no relatório ela é chamada só de C.
 
 ## Como reproduzir
 
-Testado no Windows (PowerShell, VS Code), Python 3.10 ou mais novo, GPU NVIDIA com 4 GB (RTX 3050 Ti). Na raiz do projeto:
+Testado no Windows 11 (PowerShell, VS Code), Python 3.14, GPU NVIDIA com 4 GB (RTX 3050 Ti). As versões das bibliotecas estão fixadas no `requirements.txt`. Na raiz do projeto:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -U pip
-pip install torch --index-url https://download.pytorch.org/whl/cu128
+pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements.txt
-pip install fastapi uvicorn
+python src/smoke_test.py    # confere se o modelo carrega na GPU
 ```
 
-1. **Base e gabarito** (CPU, segundos):
+1. **Base e gabarito** (CPU, segundos). O notebook 01 mostra a tabela da base e confere o gabarito.
    ```powershell
    python base/construir_base.py
    python avaliacao/construir_testes.py

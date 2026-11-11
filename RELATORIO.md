@@ -1,4 +1,4 @@
-# Relatório · Guiding Hand: assistente de direitos e mobilidade
+# Relatório do projeto Guiding Hand: assistente de direitos e mobilidade
 
 Disciplina Generative AI for Engineering (FIAP). Tema: **Mobilidade**. Repositório: ver seção 7.
 
@@ -25,7 +25,7 @@ Disciplina Generative AI for Engineering (FIAP). Tema: **Mobilidade**. Repositó
 | Embeddings | intfloat/multilingual-e5-small (CPU) |
 | Especialização | LoRA (QLoRA 4-bit, r=8, alfa=16, 3 épocas, 136 exemplos), treinado em 624 s com pico de 1,6 GB de VRAM |
 | Hardware | NVIDIA RTX 3050 Ti Laptop, 4 GB |
-| Configurações comparadas | **A** modelo sem contexto · **B** RAG simples + limiar · **C** RAG + LoRA v2 + limiar |
+| Configurações comparadas | A: modelo sem contexto; B: RAG simples + limiar; C: RAG + LoRA v2 + limiar |
 
 ## 3. Pipeline
 
@@ -55,7 +55,17 @@ flowchart LR
 
 32 trechos de lei, cada um com id, fonte (lei e artigo), tema, link e licença. As leis são textos oficiais de domínio público. O texto veio do portal normas.leg.br e deve ser conferido no Planalto antes de usar a base em produção.
 
-[PREENCHER: colar aqui a tabela de `base/FONTES.md` (fonte, formato, licença, número de trechos)]
+| Fonte | Formato | Licença | Nº de trechos |
+|---|---|---|---|
+| Lei 13.146/2015 | Texto de lei (HTML/PDF oficial) → JSONL | Domínio público (Lei 9.610/98, art. 8º, IV) | 24 |
+| Lei 11.126/2005 | Texto de lei (HTML/PDF oficial) → JSONL | Domínio público (Lei 9.610/98, art. 8º, IV) | 1 |
+| Lei 10.048/2000 | Texto de lei (HTML/PDF oficial) → JSONL | Domínio público (Lei 9.610/98, art. 8º, IV) | 1 |
+| Lei 10.098/2000 | Texto de lei (HTML/PDF oficial) → JSONL | Domínio público (Lei 9.610/98, art. 8º, IV) | 4 |
+| Lei 10.257/2001 | Texto de lei (HTML/PDF oficial) → JSONL | Domínio público (Lei 9.610/98, art. 8º, IV) | 1 |
+| Lei 12.587/2012 | Texto de lei (HTML/PDF oficial) → JSONL | Domínio público (Lei 9.610/98, art. 8º, IV) | 1 |
+| **Total** | | | **32** |
+
+Texto obtido em: https://normas.leg.br/api/public/binario/33bc4c3d-ac6a-4c9a-b4a3-d83f03d760cb/texto. Texto oficial para conferência: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm
 
 ## 5. Performance
 
@@ -64,6 +74,10 @@ flowchart LR
 Medida nos 27 casos com resposta: **recall@1 = 81,5% (22/27)** e **recall@3 = 96,3% (26/27)**. Nos 5 casos em que o recall@1 falha, o trecho certo ficou em 2º ou 3º lugar em 4 deles; no quinto (Q02) ficou fora do top-3, que é o único erro de recall@3. A causa é a sobreposição de conteúdo entre artigos (por exemplo, acessibilidade no art. 3º e no art. 53).
 
 **Limiar de similaridade: 0,8754.** Escolhido pela melhor média entre aceitar as perguntas respondíveis e recusar as sem resposta: aceita 96,3% das respondíveis e recusa 100% das 8 sem resposta. A margem é estreita (a maior similaridade entre as sem resposta é 0,873), e o limiar foi calibrado nos mesmos 35 casos em que é medido, então o resultado tende a ser otimista.
+
+![Similaridade do melhor trecho nas perguntas com e sem resposta](avaliacao/figuras/limiar.png)
+
+A única pergunta respondível abaixo do limiar é a Q04 (0,848), que virou o erro 2 da seção 6.
 
 ### Placar das três configurações (35 casos: 27 com resposta, 8 "não consta")
 
@@ -75,6 +89,10 @@ Medida nos 27 casos com resposta: **recall@1 = 81,5% (22/27)** e **recall@3 = 96
 | Recusa indevida (/27) | 0 | 1 | 1 |
 | JSON válido (/35) | 33 | 34 | **35** |
 | Alucinação (/35) | 31 (89%) | 0 (0%) | 0 (0%) |
+
+Critérios: **acerto** = status `ok` e pelo menos metade das palavras-chave do gabarito na resposta; **citação correta** = lei e artigo iguais aos do trecho esperado; **alucinação** = responder uma pergunta que não consta na base ou citar uma fonte que não existe nela. O código está em `src/avaliacao.py`. Nos notebooks e nos arquivos de resultado, a configuração C aparece como **C2** (a C do notebook 04 é o LoRA v1).
+
+![Placar das sete configurações (gerado no notebook 05, antes da correção da métrica)](avaliacao/figuras/placar_final.png)
 
 Placar completo, com e sem limiar, e com o LoRA v1 (`avaliacao/placar_sem_correcao.csv` e `avaliacao/placar_com_correcao.csv`):
 
@@ -88,6 +106,8 @@ Placar completo, com e sem limiar, e com o LoRA v1 (`avaliacao/placar_sem_correc
 
 **Sobre a correção da métrica.** O acerto exige que as palavras-chave do gabarito apareçam na resposta. A lei escreve "1 (um) a 3 (três) anos" e "20 (vinte)", e a resposta do modelo trazia "1 a 3 anos" e "20", então a métrica marcava como erro duas respostas corretas do C (Q16 e Q19). A correção (números por extenso contam como dígitos) foi aplicada a todas as configurações e só alterou o C, mas foi descoberta depois de ver os resultados dele, por isso os dois placares aparecem lado a lado. Uma terceira resposta correta, a do B no Q10 ("não pode cobrar ingresso mais caro" contra o gabarito "não poderá ser superior"), também é marcada como erro pela métrica por palavras-chave e não foi corrigida. Contando-a à mão, o B tem 20 acertos e o C ganha por 5 casos (25 contra 20).
 
+Para achar esse tipo de falso negativo, o `src/placar_corrigido.py` lista as respostas com a fonte certa e acerto zero. No B aparecem Q10, Q18 e Q27. Conferimos as três: a Q10 está certa (citada acima); a Q27 diz só que "há reserva de vagas conforme determinados dispositivos legais", sem o percentual de 10%; e a Q18 diz que "sites são obrigatórios para usuários com deficiência", o que troca o sentido (a lei obriga a acessibilidade dos sites). As duas últimas continuam como erro. No C nenhuma resposta caiu nesse caso.
+
 ### Trechos vistos e não vistos no treino do LoRA
 
 8 trechos foram deixados de fora do treino (T03, T09, T10, T12, T16, T20, T28, T31) para medir se o modelo generaliza ou só decorou. Com a métrica corrigida, nos casos com resposta:
@@ -100,6 +120,18 @@ Placar completo, com e sem limiar, e com o LoRA v1 (`avaliacao/placar_sem_correc
 | C: RAG + LoRA v2 + limiar | 8 | 17 | 8 | 14 |
 
 O grupo "não visto" tem só 8 casos, então a leitura é um indício, não uma prova: o modelo ajustado não piorou em trechos que nunca viu.
+
+### Perda de treino e decoreba
+
+![Perda de treino por passo, LoRA v1 e v2](avaliacao/figuras/loss_v1_v2.png)
+
+A perda média do v2 cai de 0,18 na 1ª época para 0,014 na 3ª (o v1 chega a 0,001). Ou seja, o modelo decorou as respostas-alvo do treino, o que é esperado com 136 exemplos e 3 épocas. Não separamos um conjunto de validação para acompanhar a perda fora do treino: com 24 trechos de treino, sobrariam um ou dois exemplos por trecho. Por isso a decoreba foi controlada de outro jeito:
+
+1. Nenhuma pergunta de teste aparece no treino. O `src/gerar_dados_treino.py` compara as perguntas normalizadas (sem acento e pontuação) e para com erro se houver repetição.
+2. Os 8 trechos reservados não aparecem no treino nem como contexto.
+3. O acerto foi medido nas 35 perguntas de teste, e não na perda. A tabela acima mostra que o C melhorou também nos trechos que nunca viu (8 de 8 contra 5 de 8 do B).
+
+Os números indicam que o ganho principal veio do comportamento (formato JSON, resposta curta e direta, recusa quando o trecho não responde). O conteúdo da lei continua vindo da busca: sem o trecho no prompt, o modelo não tem de onde tirar a resposta.
 
 ### Demonstração de alucinação (config A)
 
@@ -116,31 +148,31 @@ Treino do LoRA: 624 s, 1,6 GB de VRAM. Inferência: cerca de 3,1 GB de VRAM e ce
 
 São os 5 erros restantes da configuração final (C), nos 35 casos. Os arquivos `avaliacao/resultados/C2.json` trazem as saídas completas. As correções são **propostas, não testadas**.
 
-### Erro 1 · Q02: a busca não trouxe o trecho certo
+### Erro 1 (Q02): a busca não trouxe o trecho certo
 - **Pergunta:** "O que significa acessibilidade segundo a Lei Brasileira de Inclusão?" Esperado: art. 3º, I. Buscou: T17, T11, T21 (o certo ficou de fora do top-3).
 - **Saída:** definiu acessibilidade corretamente pelo art. 53 e citou "art. 53", que não é o artigo do gabarito.
 - **Causa provável:** dois artigos definem acessibilidade e o art. 53 é curto e casa melhor com a pergunta. As similaridades do modelo e5 ficam numa faixa estreita (0,85 a 0,93), então pequenas diferenças decidem o ranking.
 - **Correção proposta:** busca híbrida (palavras-chave mais embeddings) ou reranqueamento; e aceitar mais de um trecho correto no gabarito quando dois artigos respondem à pergunta.
 
-### Erro 2 · Q04: o limiar recusou uma pergunta que a base respondia
+### Erro 2 (Q04): o limiar recusou uma pergunta que a base respondia
 - **Pergunta:** "O que são barreiras urbanísticas?" O trecho certo (T04) ficou em 1º, mas com similaridade 0,848, abaixo do limiar 0,8754.
 - **Saída:** "Não consta na base de conhecimento" (recusa indevida). Sem o limiar, B e C respondem certo.
 - **Causa:** um limiar único para toda a base; perguntas curtas contra trechos longos têm similaridade menor mesmo quando o trecho está certo. Além disso, o limiar foi calibrado nos mesmos casos do teste.
 - **Correção proposta:** decidir a recusa com mais de um sinal (limiar mais a diferença entre o 1º e o 2º trecho), calibrar o limiar em casos separados dos de teste, ou deixar o modelo decidir quando a similaridade cair numa zona cinza.
 
-### Erro 3 · Q05: resposta mistura dois trechos e cita o artigo errado
+### Erro 3 (Q05): resposta mistura dois trechos e cita o artigo errado
 - **Pergunta:** "Recusar uma adaptação razoável conta como discriminação?" Esperado: art. 4º (T05, que ficou em 1º, com 0,884).
 - **Saída:** "Sim. Praticar, induzir ou incitar discriminação em razão da deficiência implica recusar adaptações razoáveis", citando o art. 88, que é o artigo da pena do crime de discriminação.
 - **Causa:** os três trechos buscados falam de discriminação e o modelo de 1,5 bilhão de parâmetros misturou o texto do art. 88 com a ideia do art. 4º.
 - **Correção proposta:** mostrar ao modelo só o melhor trecho quando a diferença de similaridade for grande, e usar reranqueamento.
 
-### Erro 4 · Q07: resposta correta com o artigo citado errado
+### Erro 4 (Q07): resposta correta com o artigo citado errado
 - **Pergunta:** "A pessoa com deficiência tem direito a pontos de parada e terminais acessíveis no transporte coletivo?" Esperado: art. 9º (T07, em 1º com 0,923).
 - **Saída:** "Sim..." (certo), mas citou "art. 48, caput, § 1º e § 2º".
 - **Causa:** o campo "fonte" é texto livre gerado pelo modelo, que o copiou de outro trecho do prompt.
 - **Correção proposta:** o modelo devolver o **id do trecho usado** (por exemplo "T07") e o código preencher a fonte a partir da base, de modo que a fonte nunca seja inventada ou deformada.
 
-### Erro 5 · Q15: resposta correta com o artigo citado errado
+### Erro 5 (Q15): resposta correta com o artigo citado errado
 - **Pergunta:** "O táxi pode cobrar tarifa diferente de pessoa com deficiência?" Esperado: art. 51 (T15, em 1º com 0,925).
 - **Saída:** "Não. É proibida a cobrança diferenciada..." (certo), mas citou "art. 46, caput".
 - **Causa e correção:** as mesmas do erro 4. Os erros 3, 4 e 5 mostram o mesmo padrão: o trecho certo está em 1º, mas o modelo erra qual artigo citar. **Atenção:** citar sempre o trecho top-1 *não* é uma boa correção, porque nos casos em que o recall@1 falha o modelo hoje às vezes cita o certo (por exemplo, Q19, cujo top-1 era outro trecho). A correção proposta pelo id do trecho precisa ser testada.
@@ -163,4 +195,3 @@ A base é só texto de lei, sem dado pessoal. A API foi desenhada para minimizar
 ### Links
 
 - Repositório: https://github.com/LanaAuada/guiding-hand-genai
-- Vídeo: [PREENCHER: link do vídeo]
