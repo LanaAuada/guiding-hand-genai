@@ -1,0 +1,8 @@
+config,acerto (/27),citação correta (/27),recusa correta (/8),recusa indevida (/27),JSON válido (/35),alucinação (/35),taxa de alucinação
+A (sem contexto),7,0,2,0,33,31,89%
+B (RAG + limiar),19,21,8,1,34,0,0%
+B sem limiar,20,22,5,0,34,3,9%
+C (RAG + LoRA v1 + limiar),20,21,8,1,34,0,0%
+C sem limiar,21,22,7,0,34,1,3%
+C2 (RAG + LoRA v2 + limiar),25,22,8,1,35,0,0%
+C2 sem limiar,26,23,7,0,35,1,3%

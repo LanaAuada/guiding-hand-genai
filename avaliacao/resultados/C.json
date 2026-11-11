@@ -1,0 +1,558 @@
+{
+ "Q01": {
+  "raw": "{\"resposta\":\"Considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.\",\"fonte\":\"Lei 13.146/2015, art. 2º, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.",
+   "fonte": "Lei 13.146/2015, art. 2º, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.925493597984314,
+  "trechos": [
+   "T01",
+   "T11",
+   "T05"
+  ]
+ },
+ "Q02": {
+  "raw": "{\"resposta\":\"A acessibilidade é direito que garante à pessoa com deficiência ou com mobilidade reduzida viver de forma independente e exercer seus direitos de cidadania e de participação social.\",\"fonte\":\"Lei 13.146/2015, art. 53\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A acessibilidade é direito que garante à pessoa com deficiência ou com mobilidade reduzida viver de forma independente e exercer seus direitos de cidadania e de participação social.",
+   "fonte": "Lei 13.146/2015, art. 53",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9024162292480469,
+  "trechos": [
+   "T17",
+   "T11",
+   "T21"
+  ]
+ },
+ "Q03": {
+  "raw": "{\"resposta\":\"tecnologia assistiva ou ajuda técnica: produtos, equipamentos, dispositivos, recursos, metodologias, estratégias, práticas e serviços que objetivem promover a funcionalidade, relacionada à atividade e à participação da pessoa com deficiência ou com mobilidade reduzida, visando à sua autonomia, independência, qualidade de vida e inclusão social;\",\"fonte\":\"Lei 13.146/2015, art. 3º, III\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "tecnologia assistiva ou ajuda técnica: produtos, equipamentos, dispositivos, recursos, metodologias, estratégias, práticas e serviços que objetivem promover a funcionalidade, relacionada à atividade e à participação da pessoa com deficiência ou com mobilidade reduzida, visando à sua autonomia, independência, qualidade de vida e inclusão social;",
+   "fonte": "Lei 13.146/2015, art. 3º, III",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8833736777305603,
+  "trechos": [
+   "T21",
+   "T03",
+   "T17"
+  ]
+ },
+ "Q04": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8477625250816345,
+  "trechos": [
+   "T04",
+   "T27",
+   "T28"
+  ]
+ },
+ "Q05": {
+  "raw": "{\"resposta\":\"Praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência: Pena – reclusão, de 1 (um) a 3 (três) anos, e multa.\",\"fonte\":\"Lei 13.146/2015, art. 88, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência: Pena – reclusão, de 1 (um) a 3 (três) anos, e multa.",
+   "fonte": "Lei 13.146/2015, art. 88, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8837773203849792,
+  "trechos": [
+   "T05",
+   "T22",
+   "T11"
+  ]
+ },
+ "Q06": {
+  "raw": "{\"resposta\":\"É dever de todos comunicar à autoridade competente qualquer forma de ameaça ou de violação aos direitos da pessoa com deficiência.\",\"fonte\":\"Lei 13.146/2015, art. 7º, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "É dever de todos comunicar à autoridade competente qualquer forma de ameaça ou de violação aos direitos da pessoa com deficiência.",
+   "fonte": "Lei 13.146/2015, art. 7º, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9230890274047852,
+  "trechos": [
+   "T06",
+   "T08",
+   "T01"
+  ]
+ },
+ "Q07": {
+  "raw": "{\"resposta\":\"Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, as estações, os portos e os terminais em operação no País devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas.\",\"fonte\":\"Lei 13.146/2015, art. 48, caput, § 1º e § 2º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, as estações, os portos e os terminais em operação no País devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas.",
+   "fonte": "Lei 13.146/2015, art. 48, caput, § 1º e § 2º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9228965044021606,
+  "trechos": [
+   "T07",
+   "T14",
+   "T12"
+  ]
+ },
+ "Q08": {
+  "raw": "{\"resposta\":\"Os direitos previstos neste artigo são extensivos ao acompanhante da pessoa com deficiência ou ao seu atendente pessoal, exceto quanto ao disposto nos incisos VI e VII deste artigo.\",\"fonte\":\"Lei 13.146/2015, art. 9º, § 1º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Os direitos previstos neste artigo são extensivos ao acompanhante da pessoa com deficiência ou ao seu atendente pessoal, exceto quanto ao disposto nos incisos VI e VII deste artigo.",
+   "fonte": "Lei 13.146/2015, art. 9º, § 1º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9083722829818726,
+  "trechos": [
+   "T07",
+   "T26",
+   "T08"
+  ]
+ },
+ "Q09": {
+  "raw": "{\"resposta\":\"É assegurado à pessoa com deficiência que não possua meios para prover sua subsistência nem de tê-la provida por sua família o benefício mensal de 1 (um) salário-mínimo, nos termos da Lei nº 8.742, de 7 de dezembro de 1993.\",\"fonte\":\"Lei 13.146/2015, art. 40\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "É assegurado à pessoa com deficiência que não possua meios para prover sua subsistência nem de tê-la provida por sua família o benefício mensal de 1 (um) salário-mínimo, nos termos da Lei nº 8.742, de 7 de dezembro de 1993.",
+   "fonte": "Lei 13.146/2015, art. 40",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9020776748657227,
+  "trechos": [
+   "T09",
+   "T21",
+   "T01"
+  ]
+ },
+ "Q10": {
+  "raw": "{\"resposta\":\"O valor do ingresso da pessoa com deficiência não poderá ser superior ao valor cobrado das demais pessoas.\",\"fonte\":\"Lei 13.146/2015, art. 44, § 7º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "O valor do ingresso da pessoa com deficiência não poderá ser superior ao valor cobrado das demais pessoas.",
+   "fonte": "Lei 13.146/2015, art. 44, § 7º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8984436988830566,
+  "trechos": [
+   "T10",
+   "T15",
+   "T07"
+  ]
+ },
+ "Q11": {
+  "raw": "{\"resposta\":\"Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, as estações, os portos e os terminais em operação no País devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas.\",\"fonte\":\"Lei 13.146/2015, art. 48, caput, § 1º e § 2º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, as estações, os portos e os terminais em operação no País devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas.",
+   "fonte": "Lei 13.146/2015, art. 48, caput, § 1º e § 2º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8924523591995239,
+  "trechos": [
+   "T14",
+   "T12",
+   "T31"
+  ]
+ },
+ "Q12": {
+  "raw": "{\"resposta\":\"Em todas as áreas de estacionamento aberto ao público, de uso público ou privado de uso coletivo e em vias públicas, devem ser reservadas vagas próximas aos acessos de circulação de pedestres, devidamente sinalizadas, para veículos que transportem pessoa com deficiência com comprometimento de mobilidade, desde que devidamente identificados.\",\"fonte\":\"Lei 13.146/2015, art. 47, caput e § 1º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Em todas as áreas de estacionamento aberto ao público, de uso público ou privado de uso coletivo e em vias públicas, devem ser reservadas vagas próximas aos acessos de circulação de pedestres, devidamente sinalizadas, para veículos que transportem pessoa com deficiência com comprometimento de mobilidade, desde que devidamente identificados.",
+   "fonte": "Lei 13.146/2015, art. 47, caput e § 1º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9240995645523071,
+  "trechos": [
+   "T13",
+   "T32",
+   "T15"
+  ]
+ },
+ "Q13": {
+  "raw": "{\"resposta\":\"Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, as estações, os portos e os terminais em operação no País devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas.\",\"fonte\":\"Lei 13.146/2015, art. 48, caput, § 1º e § 2º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Os veículos de transporte coletivo terrestre, aquaviário e aéreo, as instalações, as estações, os portos e os terminais em operação no País devem ser acessíveis, de forma a garantir o seu uso por todas as pessoas.",
+   "fonte": "Lei 13.146/2015, art. 48, caput, § 1º e § 2º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8893657922744751,
+  "trechos": [
+   "T14",
+   "T31",
+   "T12"
+  ]
+ },
+ "Q14": {
+  "raw": "{\"resposta\":\"As frotas de empresas de táxi devem reservar 10% (dez por cento) de seus veículos acessíveis à pessoa com deficiência.\",\"fonte\":\"Lei 13.146/2015, art. 51, caput e § 1º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "As frotas de empresas de táxi devem reservar 10% (dez por cento) de seus veículos acessíveis à pessoa com deficiência.",
+   "fonte": "Lei 13.146/2015, art. 51, caput e § 1º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9029268026351929,
+  "trechos": [
+   "T15",
+   "T14",
+   "T32"
+  ]
+ },
+ "Q15": {
+  "raw": "{\"resposta\":\"As frotas de empresas de táxi devem reservar 10% (dez por cento) de seus veículos acessíveis à pessoa com deficiência. É proibida a cobrança diferenciada de tarifas ou de valores adicionais pelo serviço de táxi prestado à pessoa com deficiência.\",\"fonte\":\"Lei 13.146/2015, art. 51, caput e § 1º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "As frotas de empresas de táxi devem reservar 10% (dez por cento) de seus veículos acessíveis à pessoa com deficiência. É proibida a cobrança diferenciada de tarifas ou de valores adicionais pelo serviço de táxi prestado à pessoa com deficiência.",
+   "fonte": "Lei 13.146/2015, art. 51, caput e § 1º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9246329665184021,
+  "trechos": [
+   "T15",
+   "T32",
+   "T11"
+  ]
+ },
+ "Q16": {
+  "raw": "{\"resposta\":\"As locadoras de veículos são obrigadas a oferecer 1 (um) veículo adaptado para uso de pessoa com deficiência, a cada conjunto de 20 (vinte) veículos de sua frota.\",\"fonte\":\"Lei 13.146/2015, art. 52, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "As locadoras de veículos são obrigadas a oferecer 1 (um) veículo adaptado para uso de pessoa com deficiência, a cada conjunto de 20 (vinte) veículos de sua frota.",
+   "fonte": "Lei 13.146/2015, art. 52, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9256560206413269,
+  "trechos": [
+   "T16",
+   "T14",
+   "T11"
+  ]
+ },
+ "Q17": {
+  "raw": "{\"resposta\":\"Em qualquer intervenção nas vias e nos espaços públicos, o poder público e as empresas concessionárias responsáveis pela execução das obras e dos serviços devem garantir, de forma segura, a fluidez do trânsito e a livre circulação e acessibilidade das pessoas, durante e após sua execução.\",\"fonte\":\"Lei 13.146/2015, art. 59\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Em qualquer intervenção nas vias e nos espaços públicos, o poder público e as empresas concessionárias responsáveis pela execução das obras e dos serviços devem garantir, de forma segura, a fluidez do trânsito e a livre circulação e acessibilidade das pessoas, durante e após sua execução.",
+   "fonte": "Lei 13.146/2015, art. 59",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8985769748687744,
+  "trechos": [
+   "T19",
+   "T27",
+   "T13"
+  ]
+ },
+ "Q18": {
+  "raw": "{\"resposta\":\"É obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País ou por órgãos de governo, para uso da pessoa com deficiência, garantindo-lhe acesso às informações disponíveis, conforme as melhores práticas e diretrizes de acessibilidade adotadas internacionalmente.\",\"fonte\":\"Lei 13.146/2015, art. 63, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "É obrigatória a acessibilidade nos sítios da internet mantidos por empresas com sede ou representação comercial no País ou por órgãos de governo, para uso da pessoa com deficiência, garantindo-lhe acesso às informações disponíveis, conforme as melhores práticas e diretrizes de acessibilidade adotadas internacionalmente.",
+   "fonte": "Lei 13.146/2015, art. 63, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9008418321609497,
+  "trechos": [
+   "T20",
+   "T14",
+   "T31"
+  ]
+ },
+ "Q19": {
+  "raw": "{\"resposta\":\"Praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência: Pena – reclusão, de 1 (um) a 3 (três) anos, e multa.\",\"fonte\":\"Lei 13.146/2015, art. 88, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência: Pena – reclusão, de 1 (um) a 3 (três) anos, e multa.",
+   "fonte": "Lei 13.146/2015, art. 88, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9055972099304199,
+  "trechos": [
+   "T05",
+   "T22",
+   "T01"
+  ]
+ },
+ "Q20": {
+  "raw": "{\"resposta\":\"É criado o Cadastro Nacional de Inclusão da Pessoa com Deficiência (Cadastro-Inclusão), registro público eletrônico com a finalidade de coletar, processar, sistematizar e disseminar informações georreferenciadas que permitam a identificação e a caracterização socioeconômica da pessoa com deficiência, bem como das barreiras que impedem a realização de seus direitos.\",\"fonte\":\"Lei 13.146/2015, art. 92, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "É criado o Cadastro Nacional de Inclusão da Pessoa com Deficiência (Cadastro-Inclusão), registro público eletrônico com a finalidade de coletar, processar, sistematizar e disseminar informações georreferenciadas que permitam a identificação e a caracterização socioeconômica da pessoa com deficiência, bem como das barreiras que impedem a realização de seus direitos.",
+   "fonte": "Lei 13.146/2015, art. 92, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9026082754135132,
+  "trechos": [
+   "T23",
+   "T01",
+   "T11"
+  ]
+ },
+ "Q21": {
+  "raw": "{\"resposta\":\"É assegurado à pessoa com deficiência visual acompanhada de cão-guia o direito de ingressar e de permanecer com o animal em todos os meios de transporte e em estabelecimentos abertos ao público, de uso público e privados de uso coletivo, desde que observadas as condições impostas por esta Lei.\",\"fonte\":\"Lei 11.126/2005, art. 1º, caput e § 2º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "É assegurado à pessoa com deficiência visual acompanhada de cão-guia o direito de ingressar e de permanecer com o animal em todos os meios de transporte e em estabelecimentos abertos ao público, de uso público e privados de uso coletivo, desde que observadas as condições impostas por esta Lei.",
+   "fonte": "Lei 11.126/2005, art. 1º, caput e § 2º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8984581232070923,
+  "trechos": [
+   "T25",
+   "T13",
+   "T14"
+  ]
+ },
+ "Q22": {
+  "raw": "{\"resposta\":\"As pessoas com deficiência, os idosos com idade igual ou superior a 60 (sessenta) anos, as gestantes, as lactantes, as pessoas com crianças de colo e os obesos terão atendimento prioritário, nos termos desta Lei.\",\"fonte\":\"Lei 10.048/2000, art. 1º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "As pessoas com deficiência, os idosos com idade igual ou superior a 60 (sessenta) anos, as gestantes, as lactantes, as pessoas com crianças de colo e os obesos terão atendimento prioritário, nos termos desta Lei.",
+   "fonte": "Lei 10.048/2000, art. 1º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8894954919815063,
+  "trechos": [
+   "T26",
+   "T07",
+   "T08"
+  ]
+ },
+ "Q23": {
+  "raw": "{\"resposta\":\"O planejamento e a urbanização das vias públicas, dos parques e dos demais espaços de uso público deverão ser concebidos e executados de forma a torná-los acessíveis para todas as pessoas, inclusive para aquelas com deficiência ou com mobilidade reduzida.\",\"fonte\":\"Lei 10.098/2000, art. 3º, caput e parágrafo único\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "O planejamento e a urbanização das vias públicas, dos parques e dos demais espaços de uso público deverão ser concebidos e executados de forma a torná-los acessíveis para todas as pessoas, inclusive para aquelas com deficiência ou com mobilidade reduzida.",
+   "fonte": "Lei 10.098/2000, art. 3º, caput e parágrafo único",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8775278329849243,
+  "trechos": [
+   "T27",
+   "T31",
+   "T19"
+  ]
+ },
+ "Q24": {
+  "raw": "{\"resposta\":\"Os semáforos para pedestres instalados em vias públicas de grande circulação, ou que deem acesso aos serviços de reabilitação, devem obrigatoriamente estar equipados com mecanismo que emite sinal sonoro suave para orientação do pedestre.\",\"fonte\":\"Lei 10.098/2000, art. 9º, parágrafo único\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Os semáforos para pedestres instalados em vias públicas de grande circulação, ou que deem acesso aos serviços de reabilitação, devem obrigatoriamente estar equipados com mecanismo que emite sinal sonoro suave para orientação do pedestre.",
+   "fonte": "Lei 10.098/2000, art. 9º, parágrafo único",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.92485511302948,
+  "trechos": [
+   "T28",
+   "T13",
+   "T29"
+  ]
+ },
+ "Q25": {
+  "raw": "{\"resposta\":\"A instalação de qualquer mobiliário urbano em área de circulação comum para pedestre que ofereça risco de acidente à pessoa com deficiência deverá ser indicada mediante sinalização tátil de alerta no piso, de acordo com as normas técnicas pertinentes.\",\"fonte\":\"Lei 10.098/2000, art. 10-A\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A instalação de qualquer mobiliário urbano em área de circulação comum para pedestre que ofereça risco de acidente à pessoa com deficiência deverá ser indicada mediante sinalização tátil de alerta no piso, de acordo com as normas técnicas pertinentes.",
+   "fonte": "Lei 10.098/2000, art. 10-A",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.8873986601829529,
+  "trechos": [
+   "T29",
+   "T30",
+   "T28"
+  ]
+ },
+ "Q26": {
+  "raw": "{\"resposta\":\"As cidades de que trata o caput deste artigo devem elaborar plano de rotas acessíveis, compatível com o plano diretor no qual está inserido, que disponha sobre os passeios públicos a serem implantados ou reformados pelo poder público, com vistas a garantir acessibilidade da pessoa com deficiência ou com mobilidade reduzida a todas as rotas e vias existentes, inclusive as que concentram os focos geradores de maior circulação de pedestres, como os órgãos públicos e os locais de prestação de serviços públicos e privados de saúde, educação, assistência social, esporte, cultura, correios e telégrafos, bancos, entre outros, sempre que possível de maneira integrada com os sistemas de transporte coletivo de passageiros.\",\"fonte\":\"Lei 10.257/2001, art.",
+  "saida": null,
+  "json_valido": false,
+  "gate": false,
+  "top_score": 0.9156107306480408,
+  "trechos": [
+   "T31",
+   "T27",
+   "T19"
+  ]
+ },
+ "Q27": {
+  "raw": "{\"resposta\":\"Na outorga de exploração de serviço de táxi, reservar-se-ão 10% (dez por cento) das vagas para condutores com deficiência.\",\"fonte\":\"Lei 12.587/2012, art. 12-B, caput\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Na outorga de exploração de serviço de táxi, reservar-se-ão 10% (dez por cento) das vagas para condutores com deficiência.",
+   "fonte": "Lei 12.587/2012, art. 12-B, caput",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": 0.9138789176940918,
+  "trechos": [
+   "T32",
+   "T15",
+   "T13"
+  ]
+ },
+ "N01": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8085777163505554,
+  "trechos": [
+   "T32",
+   "T31",
+   "T29"
+  ]
+ },
+ "N02": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8713517785072327,
+  "trechos": [
+   "T25",
+   "T07",
+   "T10"
+  ]
+ },
+ "N03": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8730999231338501,
+  "trechos": [
+   "T13",
+   "T32",
+   "T15"
+  ]
+ },
+ "N04": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8453683257102966,
+  "trechos": [
+   "T07",
+   "T31",
+   "T10"
+  ]
+ },
+ "N05": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8619700074195862,
+  "trechos": [
+   "T25",
+   "T14",
+   "T07"
+  ]
+ },
+ "N06": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8367416262626648,
+  "trechos": [
+   "T31",
+   "T19",
+   "T27"
+  ]
+ },
+ "N07": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.7978532314300537,
+  "trechos": [
+   "T02",
+   "T28",
+   "T12"
+  ]
+ },
+ "N08": {
+  "raw": null,
+  "saida": {
+   "resposta": "Não consta na base de conhecimento.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": true,
+  "top_score": 0.8663262724876404,
+  "trechos": [
+   "T21",
+   "T11",
+   "T23"
+  ]
+ }
+}
