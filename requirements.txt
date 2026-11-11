@@ -1,0 +1,14 @@
+# PyTorch com CUDA deve ser instalado antes (ver README):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+transformers
+accelerate
+peft
+bitsandbytes
+sentence-transformers
+numpy
+pandas
+matplotlib
+fastapi
+uvicorn
+jupyter
+nbformat

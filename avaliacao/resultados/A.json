@@ -1,0 +1,414 @@
+{
+ "Q01": {
+  "raw": "{\"resposta\":\"A Lei Federal n° 10.217/2001 define pessoa com deficiência como qualquer indivíduo que apresente limitação funcional ou sensorial que impeça sua participação ativa na sociedade.\",\"fonte\":\"Lei Federal n° 10.217/2001\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A Lei Federal n° 10.217/2001 define pessoa com deficiência como qualquer indivíduo que apresente limitação funcional ou sensorial que impeça sua participação ativa na sociedade.",
+   "fonte": "Lei Federal n° 10.217/2001",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q02": {
+  "raw": "{\"resposta\":\"A acessibilidade na Lei Brasileira de Inclusão se refere à capacidade de todos usufruírem dos serviços públicos e da infraestrutura urbana, considerando as necessidades físicas e sensoriais das pessoas com deficiências visuais ou auditivas.\",\"fonte\":\"Lei nº 12.965/2014\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A acessibilidade na Lei Brasileira de Inclusão se refere à capacidade de todos usufruírem dos serviços públicos e da infraestrutura urbana, considerando as necessidades físicas e sensoriais das pessoas com deficiências visuais ou auditivas.",
+   "fonte": "Lei nº 12.965/2014",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q03": {
+  "raw": "A tecnologia assistiva é uma ferramenta ou dispositivo que ajuda as pessoas com deficiências visuais a se comunicar, navegar e participar ativamente na sociedade. Exemplos incluem leitores de tela, altavolumes para audição, e dispositivos de comunicação por voz.\n\nFonte: Lei Federal nº 12.965/2014 - Lei Brasileira da Inclusão Digital\n\n{\"resposta\":\"A tecnologia assistiva é usada para ajudar as pessoas com deficiências visuais a se comunicarem, navegar e participar ativamente na sociedade.\",\"fonte\":\"Lei Federal nº 12.965/2014 - Lei Brasileira da Inclusão Digital\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A tecnologia assistiva é usada para ajudar as pessoas com deficiências visuais a se comunicarem, navegar e participar ativamente na sociedade.",
+   "fonte": "Lei Federal nº 12.965/2014 - Lei Brasileira da Inclusão Digital",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q04": {
+  "raw": "{\"resposta\":\"Barreiras urbanísticas são obstáculos físicos ou estruturais na infraestrutura urbana que dificultam a mobilidade das pessoas com deficiência visual.\",\"fonte\":\"Lei Federal nº 12.507/2011 - Lei Brasileira de Inclusão Digital\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Barreiras urbanísticas são obstáculos físicos ou estruturais na infraestrutura urbana que dificultam a mobilidade das pessoas com deficiência visual.",
+   "fonte": "Lei Federal nº 12.507/2011 - Lei Brasileira de Inclusão Digital",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q05": {
+  "raw": "{\"resposta\":\"Sim, recusar uma adaptação razoável pode ser considerado discriminatório.\",\"fonte\":\"Lei Brasileira contra a Discriminação Racial\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, recusar uma adaptação razoável pode ser considerado discriminatório.",
+   "fonte": "Lei Brasileira contra a Discriminação Racial",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q06": {
+  "raw": "{\"resposta\":\"A comunicação de uma violação de direitos de pessoa com deficiência é o dever dos órgãos públicos e das organizações que atuam na área da inclusão social ou acessibilidade.\",\"fonte\":\"Lei Federal n°10.216/2001 - Lei Aldir Blanc\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A comunicação de uma violação de direitos de pessoa com deficiência é o dever dos órgãos públicos e das organizações que atuam na área da inclusão social ou acessibilidade.",
+   "fonte": "Lei Federal n°10.216/2001 - Lei Aldir Blanc",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q07": {
+  "raw": "{\"resposta\":\"Sim, a Lei Federal n° 12.403/2011 estabelece direitos para pessoas com deficiência, incluindo acesso a pontos de parada e terminais acessíveis.\",\"fonte\":\"Lei Federal n° 12.403/2011\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, a Lei Federal n° 12.403/2011 estabelece direitos para pessoas com deficiência, incluindo acesso a pontos de parada e terminais acessíveis.",
+   "fonte": "Lei Federal n° 12.403/2011",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q08": {
+  "raw": "{\"resposta\":\"Sim, o acompanhante da pessoa com deficiência também tem acesso prioritário nos transportes públicos e nas instituições de ensino.\",\"fonte\":\"Lei Federal n°10.257/2001 - Lei das Instituições de Ensino\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, o acompanhante da pessoa com deficiência também tem acesso prioritário nos transportes públicos e nas instituições de ensino.",
+   "fonte": "Lei Federal n°10.257/2001 - Lei das Instituições de Ensino",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q09": {
+  "raw": "{\"resposta\":\"O Benefício Emergencial de Desemprego (BED) pode ser uma opção para pessoas com deficiência sem meios de subsistência. Este benefício é pago pelo governo federal e pode ajudar a cobrir despesas básicas.\",\"fonte\":\"Lei nº 12.965/2014 - Artigo 7º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "O Benefício Emergencial de Desemprego (BED) pode ser uma opção para pessoas com deficiência sem meios de subsistência. Este benefício é pago pelo governo federal e pode ajudar a cobrir despesas básicas.",
+   "fonte": "Lei nº 12.965/2014 - Artigo 7º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q10": {
+  "raw": "{\"resposta\":\"Sim, pode cobrar ingressos mais caros para pessoas com deficiência, desde que esteja legalmente justificado.\",\"fonte\":\"Lei Federal n°10.216/2001 - Lei das Condições do Trabalho\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, pode cobrar ingressos mais caros para pessoas com deficiência, desde que esteja legalmente justificado.",
+   "fonte": "Lei Federal n°10.216/2001 - Lei das Condições do Trabalho",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q11": {
+  "raw": "{\"resposta\":\"Os elementos principais incluem plataformas elevatórias, rampas, escadas rolantes, equipamentos de comunicação acessíveis e sistemas de transmissão de voz.\",\"fonte\":\"Lei Federal nº 12.403/2011 - Lei das Transportes\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Os elementos principais incluem plataformas elevatórias, rampas, escadas rolantes, equipamentos de comunicação acessíveis e sistemas de transmissão de voz.",
+   "fonte": "Lei Federal nº 12.403/2011 - Lei das Transportes",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q12": {
+  "raw": "{\"resposta\":\"De acordo com a Lei Federal n° 12.540/2011, as empresas privadas devem disponibilizar ao menos 1% das vagas de estacionamento para veículos adaptados.\",\"fonte\":\"Lei Federal n° 12.540/2011\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "De acordo com a Lei Federal n° 12.540/2011, as empresas privadas devem disponibilizar ao menos 1% das vagas de estacionamento para veículos adaptados.",
+   "fonte": "Lei Federal n° 12.540/2011",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q13": {
+  "raw": "{\"resposta\":\"Sim, os ônibus devem informar todos os pontos do itinerário de maneira acessível para pessoas com deficiência visual.\",\"fonte\":\"Lei Federal nº 12.403/2011 - Lei das Transportes\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, os ônibus devem informar todos os pontos do itinerário de maneira acessível para pessoas com deficiência visual.",
+   "fonte": "Lei Federal nº 12.403/2011 - Lei das Transportes",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q14": {
+  "raw": "{\"resposta\":\"Deveria atender ao menos 50% das solicitações para veículos adaptados.\",\"fonte\":\"Lei Federal n°12.403/2011 - Lei Maria da Penha\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Deveria atender ao menos 50% das solicitações para veículos adaptados.",
+   "fonte": "Lei Federal n°12.403/2011 - Lei Maria da Penha",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q15": {
+  "raw": "{\"resposta\":\"Sim, o táxi pode cobrar uma taxa diferenciada para pessoas com deficiência, mas não pode discriminar ou exigir condições especiais além da necessidade da pessoa com deficiência.\",\"fonte\":\"Lei Federal n°10.257/2001 - Lei das Deficientes Visuais\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, o táxi pode cobrar uma taxa diferenciada para pessoas com deficiência, mas não pode discriminar ou exigir condições especiais além da necessidade da pessoa com deficiência.",
+   "fonte": "Lei Federal n°10.257/2001 - Lei das Deficientes Visuais",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q16": {
+  "raw": "{\"resposta\":\"Sim, locadoras podem oferecer carros adaptados para pessoas com deficiência visual.\",\"fonte\":\"Lei Federal nº 12.505/2011 - Lei das Pessoas com Deficiência\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, locadoras podem oferecer carros adaptados para pessoas com deficiência visual.",
+   "fonte": "Lei Federal nº 12.505/2011 - Lei das Pessoas com Deficiência",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q17": {
+  "raw": "{\"resposta\":\"Sim, as obras nas vias públicas devem garantir a livre circulação das pessoas.\",\"fonte\":\"Lei Federal n° 12.507/2011 - Lei dos Direitos da Pessoa com Deficiência\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, as obras nas vias públicas devem garantir a livre circulação das pessoas.",
+   "fonte": "Lei Federal n° 12.507/2011 - Lei dos Direitos da Pessoa com Deficiência",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q18": {
+  "raw": "{\"resposta\":\"Sim, todos os sites devem ser acessíveis para garantir uma experiência igualitária para todos.\",\"fonte\":\"Lei Federal nº 12.965/2014 - Lei das Inclusão Digital\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, todos os sites devem ser acessíveis para garantir uma experiência igualitária para todos.",
+   "fonte": "Lei Federal nº 12.965/2014 - Lei das Inclusão Digital",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q19": {
+  "raw": "{\"resposta\":\"A discriminação por causa da deficiência é ilegal em todo o Brasil. Pode levar à prisão de até dois anos ou multa se cometida.\",\"fonte\":\"Lei n° 12.965/2014 - Lei Maria da Penha\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A discriminação por causa da deficiência é ilegal em todo o Brasil. Pode levar à prisão de até dois anos ou multa se cometida.",
+   "fonte": "Lei n° 12.965/2014 - Lei Maria da Penha",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q20": {
+  "raw": "{\"resposta\":\"Sim, existe um cadastro nacional chamado Cadastro Nacional de Barreiras para Pessoa com Deficiência (CNBBD).\",\"fonte\":\"Lei nº 12.945/2014 - Art. 6º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, existe um cadastro nacional chamado Cadastro Nacional de Barreiras para Pessoa com Deficiência (CNBBD).",
+   "fonte": "Lei nº 12.945/2014 - Art. 6º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q21": {
+  "raw": "Sim, você pode entrar com seu cão-guia em ônibus e metrôs brasileiros. O animal é considerado acessível e protegido por leis como a Lei Federal nº 12.505/2011.\n\nFonte: Lei Federal nº 12.505/2011 - Artigo 4º\n\nResposta: Cães guias são permitidos nos transportes públicos urbanos, desde que estejam acompanhados pelo dono ou por uma pessoa autorizada pela autoridade competente.",
+  "saida": null,
+  "json_valido": false,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q22": {
+  "raw": "{\"resposta\":\"Pessoas com deficiência visual têm direito a atendimento prioritário conforme a Lei 10.048.\",\"fonte\":\"Lei 10.048/2000 - Estatuto da Pessoa com Deficiência\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Pessoas com deficiência visual têm direito a atendimento prioritário conforme a Lei 10.048.",
+   "fonte": "Lei 10.048/2000 - Estatuto da Pessoa com Deficiência",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q23": {
+  "raw": "{\"resposta\":\"A Lei Federal nº 12.506/2011 estabelece os direitos dos deficientes visuais na área da mobilidade urbana, incluindo o acesso ao transporte público e à calçada.\",\"fonte\":\"Lei Federal nº 12.506/2011\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A Lei Federal nº 12.506/2011 estabelece os direitos dos deficientes visuais na área da mobilidade urbana, incluindo o acesso ao transporte público e à calçada.",
+   "fonte": "Lei Federal nº 12.506/2011",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q24": {
+  "raw": "{\"resposta\":\"Sim, os semáforos para pedestres devem ter sinal sonoro.\",\"fonte\":\"Lei Federal n° 12.507/2011 - Artigo 4º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, os semáforos para pedestres devem ter sinal sonoro.",
+   "fonte": "Lei Federal n° 12.507/2011 - Artigo 4º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q25": {
+  "raw": "{\"resposta\":\"Sim, mobiliário urbano como balões ou placas de luz pode oferecer risco ao caminho se não estiver sinalizado adequadamente.\",\"fonte\":\"Lei Federal n° 12.507/2011 - Código Brasileiro de Diretrizes e Princípios para os Plano e Programas de Mobilidade Urbana\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, mobiliário urbano como balões ou placas de luz pode oferecer risco ao caminho se não estiver sinalizado adequadamente.",
+   "fonte": "Lei Federal n° 12.507/2011 - Código Brasileiro de Diretrizes e Princípios para os Plano e Programas de Mobilidade Urbana",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q26": {
+  "raw": "{\"resposta\":\"Sim, as cidades devem ter planos de rotas acessíveis para os passeios públicos.\",\"fonte\":\"Lei Federal nº 12.507/2011 - Lei das Cidades\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, as cidades devem ter planos de rotas acessíveis para os passeios públicos.",
+   "fonte": "Lei Federal nº 12.507/2011 - Lei das Cidades",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "Q27": {
+  "raw": "{\"resposta\":\"Sim, há reservas de vagas de táxi para motoristas com deficiência. As empresas podem oferecer essas vagas para motoristas aptos e qualificados.\",\"fonte\":\"Lei Federal n°10.436/2002 - Lei das Deficientes Visuais\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, há reservas de vagas de táxi para motoristas com deficiência. As empresas podem oferecer essas vagas para motoristas aptos e qualificados.",
+   "fonte": "Lei Federal n°10.436/2002 - Lei das Deficientes Visuais",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N01": {
+  "raw": "{\"resposta\":\"Desculpe, mas como assistente de direitos da comunidade visual, eu não tenho acesso às informações atualizadas sobre horários de ônibus.\",\"fonte\":\"Lei Federal n° 9.434\",\"status\":\"nao_consta\"}",
+  "saida": {
+   "resposta": "Desculpe, mas como assistente de direitos da comunidade visual, eu não tenho acesso às informações atualizadas sobre horários de ônibus.",
+   "fonte": "Lei Federal n° 9.434",
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N02": {
+  "raw": "{\"resposta\":\"A passagem de metrô para pessoas com deficiência visual em São Paulo pode variar dependendo da empresa de transportes e da localização específica.\",\"fonte\":\"Lei Federal n°10.257/2001 - Lei das Transportes\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A passagem de metrô para pessoas com deficiência visual em São Paulo pode variar dependendo da empresa de transportes e da localização específica.",
+   "fonte": "Lei Federal n°10.257/2001 - Lei das Transportes",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N03": {
+  "raw": "{\"resposta\":\"A multa por estacionar em vaga reservada pode variar dependendo da cidade ou estado. No geral, ela varia entre R$100 a R$500, mas isso pode mudar conforme as leis locais.\",\"fonte\":\"Lei Federal n° 8.078/90 - Código de Trânsito Brasileiro\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A multa por estacionar em vaga reservada pode variar dependendo da cidade ou estado. No geral, ela varia entre R$100 a R$500, mas isso pode mudar conforme as leis locais.",
+   "fonte": "Lei Federal n° 8.078/90 - Código de Trânsito Brasileiro",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N04": {
+  "raw": "{\"resposta\":\"Para solicitar o Passe Livre Interestadual, você precisa preencher uma ficha online ou via postagem, fornecendo informações pessoais como nome completo, CPF, endereço e número da carteira de identidade. Depois disso, envie para o órgão responsável pelo sistema.\",\"fonte\":\"Lei Federal n° 12.965/2014 - Artigo 7º\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Para solicitar o Passe Livre Interestadual, você precisa preencher uma ficha online ou via postagem, fornecendo informações pessoais como nome completo, CPF, endereço e número da carteira de identidade. Depois disso, envie para o órgão responsável pelo sistema.",
+   "fonte": "Lei Federal n° 12.965/2014 - Artigo 7º",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N05": {
+  "raw": "{\"resposta\":\"Sim, você pode levar seu cachorro de estimação no metrô se ele for controlado por uma pessoa adulta e esteja em um carrinho ou cadeirinha especial para animais de estimação.\",\"fonte\":\"Lei Federal n° 12.540/2012 - Código Florestal\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "Sim, você pode levar seu cachorro de estimação no metrô se ele for controlado por uma pessoa adulta e esteja em um carrinho ou cadeirinha especial para animais de estimação.",
+   "fonte": "Lei Federal n° 12.540/2012 - Código Florestal",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N06": {
+  "raw": "{\"resposta\":\"O prazo pode variar dependendo da situação específica e da prioridade estabelecida pela prefeitura. É recomendável entrar em contato diretamente com a administração municipal para obter informações mais precisas.\",\"fonte\":\"Lei Federal n° 12.506/2011 - Código Florestal\",\"artigo\":48\"}",
+  "saida": null,
+  "json_valido": false,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N07": {
+  "raw": "{\"resposta\":\"Infelizmente, como assistente virtual, eu não tenho acesso às informações meteorológicas atualizadas.\",\"fonte\":null,\"status\":\"nao_consta\"}",
+  "saida": {
+   "resposta": "Infelizmente, como assistente virtual, eu não tenho acesso às informações meteorológicas atualizadas.",
+   "fonte": null,
+   "status": "nao_consta"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ },
+ "N08": {
+  "raw": "{\"resposta\":\"A Lei Geral de Proteção de Dados (LGPD) não especifica diretamente sobre dados de pessoas com deficiência. No entanto, ela protege todos os dados pessoais, incluindo aqueles relacionados à deficiência ou condição especial de saúde.\",\"fonte\":\"Lei n° 13.709/2018\",\"status\":\"ok\"}",
+  "saida": {
+   "resposta": "A Lei Geral de Proteção de Dados (LGPD) não especifica diretamente sobre dados de pessoas com deficiência. No entanto, ela protege todos os dados pessoais, incluindo aqueles relacionados à deficiência ou condição especial de saúde.",
+   "fonte": "Lei n° 13.709/2018",
+   "status": "ok"
+  },
+  "json_valido": true,
+  "gate": false,
+  "top_score": null,
+  "trechos": []
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "limiar": 0.8754,
+  "recall@1": 0.815,
+  "recall@3": 0.963,
+  "aceita_respondiveis": 0.963,
+  "recusa_nao_consta": 1.0,
+  "modelo_embedding": "intfloat/multilingual-e5-small"
+}
