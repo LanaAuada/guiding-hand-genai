@@ -34,6 +34,15 @@ modelo-lora_v2/   adaptador LoRA usado na config C e na API (modelo-lora/ é o v
 
 Nos notebooks e nos arquivos de resultado a configuração final aparece como **C2** (LoRA v2); no relatório ela é chamada só de C.
 
+Placares em `avaliacao/`:
+
+| Arquivo | O que é |
+|---|---|
+| `placar_com_correcao.csv` | **Placar oficial** (o do relatório): 7 configurações, com a métrica que trata número por extenso como dígito |
+| `placar_sem_correcao.csv` | Mesmo placar, com a métrica original, para comparação |
+| `placar_final.csv` | Gerado pelo notebook 05, antes da correção da métrica (igual ao "sem correção") |
+| `placar.csv` | Gerado pelo notebook 04: só A, B e LoRA v1, com e sem limiar |
+
 ## Como reproduzir
 
 Testado no Windows 11 (PowerShell, VS Code), Python 3.14, GPU NVIDIA com 4 GB (RTX 3050 Ti). As versões das bibliotecas estão fixadas no `requirements.txt`. Na raiz do projeto:
