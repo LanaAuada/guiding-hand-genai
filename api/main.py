@@ -65,13 +65,22 @@ def detectar_pii(texto):
     return [nome for nome, rx in PADROES_PII.items() if rx.search(texto)]
 
 
+class _BuscaUmaVez:
+    """Entrega ao responder_rag os achados já calculados, para a busca rodar uma vez só."""
+    def __init__(self, achados):
+        self.achados = achados
+
+    def buscar(self, pergunta, k=3):
+        return self.achados
+
+
 def processar(estado, pergunta):
     """Lógica da rota, separada para poder ser testada sem GPU."""
     t0 = time.time()
     with estado["trava"]:                      # um pedido por vez na GPU
-        r = responder_rag(estado["llm"], estado["buscador"], pergunta, limiar=estado["limiar"])
-    por_id = {t["id"]: t for t in estado["trechos"]}
-    consultados = [TrechoConsultado(id=i, fonte=por_id[i]["fonte"], similaridade=0.0) for i in r["trechos"]]
+        achados = estado["buscador"].buscar(pergunta, k=3)   # [(trecho, similaridade), ...]
+        r = responder_rag(estado["llm"], _BuscaUmaVez(achados), pergunta, limiar=estado["limiar"])
+    consultados = [TrechoConsultado(id=t["id"], fonte=t["fonte"], similaridade=round(sim, 4)) for t, sim in achados]
     saida, motivo = r["saida"], None
     if saida is None:                          # JSON inválido: recusa segura em vez de repassar lixo
         saida, motivo = dict(RECUSA), "json_invalido"
@@ -85,8 +94,6 @@ def processar(estado, pergunta):
                        if chave_fonte(t["fonte"]) == chave_fonte(saida["fonte"])), None)
     # log sem o texto da pergunta (LGPD)
     log.info("status=%s motivo=%s top1=%.3f tempo=%.1fs", saida["status"], motivo, r["top_score"], time.time() - t0)
-    if consultados:
-        consultados[0].similaridade = round(r["top_score"], 4)
     return Resposta(resposta=saida["resposta"], fonte=saida["fonte"], status=saida["status"],
                     trecho_citado=citado, trechos_consultados=consultados)
 

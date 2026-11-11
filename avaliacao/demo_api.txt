@@ -1,0 +1,23 @@
+
+[com resposta] Pode cobrar ingresso mais caro de pessoa com deficiência?
+  status: ok | fonte: Lei 13.146/2015, art. 44, § 7º
+  resposta: Não pode. O valor do ingresso da pessoa com deficiência não poderá ser superior ao valor cobrado das demais pessoas.
+  trechos consultados: [('T10', 0.8984), ('T15', 0.8738), ('T07', 0.865)]
+
+[com resposta] Locadoras de veículos precisam ter carro adaptado?
+  status: ok | fonte: Lei 13.146/2015, art. 52, caput
+  resposta: Sim. Elas têm que ter 1 carro adaptado para cada conjunto de 20 veículos.
+  trechos consultados: [('T16', 0.9257), ('T14', 0.8644), ('T11', 0.8643)]
+
+[não consta] Qual o horário do ônibus 875P-10 hoje?
+  status: nao_consta | fonte: None
+  resposta: Não consta na base de conhecimento.
+  trechos consultados: [('T32', 0.8086), ('T31', 0.8086), ('T29', 0.7968)]
+
+[quase-vizinha (não consta)] Posso levar meu cachorro de estimação no metrô?
+  status: nao_consta | fonte: None
+  resposta: Não consta na base de conhecimento.
+  trechos consultados: [('T25', 0.862), ('T14', 0.8248), ('T07', 0.8215)]
+
+[dado pessoal (deve ser recusada)] Meu CPF é 123.456.789-09, tenho direito a passe livre?
+  HTTP 422 -> A pergunta parece conter dados pessoais (CPF). Remova-os e tente de novo.

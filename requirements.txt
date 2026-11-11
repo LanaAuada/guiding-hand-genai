@@ -15,3 +15,6 @@ nbformat
 
 fastapi
 uvicorn
+
+fastapi
+uvicorn

@@ -1,7 +1,8 @@
 """Demonstração da API: manda algumas perguntas e imprime as respostas.
 Com a API rodando (uvicorn api.main:app --port 8000), em outro terminal:
-    python api/testar_api.py"""
+    python api/testar_api.py      (grava também avaliacao/demo_api.txt, em UTF-8)"""
 import json
+from pathlib import Path
 import urllib.error
 import urllib.request
 
@@ -13,16 +14,27 @@ PERGUNTAS = [
     ("quase-vizinha (não consta)", "Posso levar meu cachorro de estimação no metrô?"),
     ("dado pessoal (deve ser recusada)", "Meu CPF é 123.456.789-09, tenho direito a passe livre?"),
 ]
+SAIDA = Path(__file__).resolve().parent.parent / "avaliacao" / "demo_api.txt"
+linhas = []
+
+
+def dizer(texto):
+    print(texto)
+    linhas.append(texto)
+
 
 for rotulo, pergunta in PERGUNTAS:
     req = urllib.request.Request(URL, data=json.dumps({"pergunta": pergunta}).encode("utf-8"),
                                  headers={"Content-Type": "application/json"})
-    print(f"\n[{rotulo}] {pergunta}")
+    dizer(f"\n[{rotulo}] {pergunta}")
     try:
         with urllib.request.urlopen(req) as r:
             d = json.loads(r.read().decode("utf-8"))
-        print("  status:", d["status"], "| fonte:", d["fonte"])
-        print("  resposta:", d["resposta"])
-        print("  trechos consultados:", [(t["id"], t["similaridade"]) for t in d["trechos_consultados"]])
+        dizer(f"  status: {d['status']} | fonte: {d['fonte']}")
+        dizer(f"  resposta: {d['resposta']}")
+        dizer(f"  trechos consultados: {[(t['id'], t['similaridade']) for t in d['trechos_consultados']]}")
     except urllib.error.HTTPError as e:
-        print("  HTTP", e.code, "->", json.loads(e.read().decode("utf-8"))["detail"])
+        dizer(f"  HTTP {e.code} -> {json.loads(e.read().decode('utf-8'))['detail']}")
+
+SAIDA.write_text("\n".join(linhas) + "\n", encoding="utf-8")
+print(f"\nSalvo em {SAIDA}")
